@@ -1,0 +1,105 @@
+0.8
+---
+:date: 8 Dec, 2014
+
+* Support custom user models for Django 1.5+.  Thanks to abbottc for the
+  pull request.
+
+0.7
+---
+:date: 3 Jul, 2014
+
+* Move from middleware to a logging handler
+
+  Using a logging handler requires slightly more involved configuration,
+  but it enables shoogie to capture exceptions raised in the deferred
+  rendering of TemplateResponse objects, which is done outside the
+  exception-handling middleware.  Thanks to abbottc for the pull request.
+
+
+0.6
+----
+:date: 5 Jun, 2014
+
+* Django 1.4 - 1.6 compatibility.  Thanks to abbottc for the pull request.
+
+0.6b
+----
+:date: 17 Nov, 2013
+
+* Faster list display using queryset.select_related() and defer()
+* First version released on pypi
+
+0.6a
+----
+:date: 29 Oct, 2013
+
+* SHOOGIE_TRACEBACK_EXCLUDE setting
+
+0.5a
+----
+:date: 23 Oct, 2013
+
+* SHOOGIE_IGNORE_EXCEPTIONS setting
+* More extensive documentation
+* Requirement for request, session, and user objects lifted
+* Direct logging API
+* Link to url only for GET requests
+
+0.4.1
+-----
+:date: 28 Aug, 2013
+
+* Increased length of exception string displayed in admin list
+
+0.4
+----
+:date: 28 Aug, 2013
+
+* E-mail list: remove duplicates, format as Full Name <email-address@example.com>
+* Display link in admin list to user admin page
+
+0.3.2
+-----
+:date: 28 Aug, 2013
+
+* Handle unicode data in admin
+
+0.3.1
+-----
+:date: 4 Jul, 2012
+
+* Store repr(dict(request.POST)) instead of request.raw_post_data
+
+0.3
+----
+:date: 21 Mar, 2012
+
+* Truncate fields in admin display
+* Store exception string as ``text`` instead of ``varchar``
+
+0.2.1
+-----
+:date: 20 Mar, 2012
+
+* Trim data to db column length
+
+0.2
+----
+:date: 20 Mar, 2012
+
+* Rearranged admin list page
+
+
+0.1.1
+------
+:date: 15 Mar, 2012
+
+* Renamed middleware class
+
+
+0.1
+----
+:date: 15 Mar, 2012
+
+* Initial release on Bitbucket
