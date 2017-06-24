@@ -5,16 +5,15 @@ setup(
     name="django-erroneous",
     package_data={
         'erroneous': [
-            'README.rst',
-            'LICENSE.txt',
-            'erroneous.templates',
+            'README.md',
+            'LICENSE.txt'
         ],
     },
-    author="Mridang Agarwalla",
-    author_email="mridang.agarwalla@gmail.com",
-    download_url='http://github.com/mridang/django-erroneous/downloads',
-    description="django-erroneous makes it easy to collect and log Django application errors.",
-    url="http://github.org/mridang/django-erroneous",
+    author="M Hassan Siddiqui",
+    author_email="mhassan.eeng@gmail.com",
+    download_url='https://github.com/mhsiddiqui/django-error-report',
+    description="View Django Error Report in Django Admin",
+    url="https://github.com/mhsiddiqui/django-error-report",
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
