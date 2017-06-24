@@ -1,5 +1,4 @@
 # django-error-report
-Log/View Django server errors.
 ==============
 
 Shoogie is a small django application for logging exceptions to a table

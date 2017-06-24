@@ -1,26 +1,33 @@
-import logging
+import traceback
 import sys
-import warnings
 
-from django import http
 from django.conf import settings
-from django.core import exceptions
 
-from log_handler import DatabaseLogHandler
+from django.views.debug import ExceptionReporter
 
-DEFAULT_IGNORES = (http.Http404, exceptions.PermissionDenied)
+from error_report.models import Error
 
 
-class ExceptionLoggingMiddleware(object):
-    def __init__(self):
-        msg = "ExceptionLoggingMiddleware is deprecated; Remove it and " + \
-              "add DatabaseLogHandler to your logging config instead"
-        warnings.warn(msg, DeprecationWarning)
+class ExceptionProcessor(object):
+    """
+    Middleware that save details of exception that occurs in any app to the database.
+    """
+
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        return self.get_response(request)
+
+    def process_exception(self, request, exception):
+        kind, info, data = sys.exc_info()
         if settings.DEBUG:
-            raise exceptions.MiddlewareNotUsed
-        self.log_handler = DatabaseLogHandler()
-
-    def process_exception(self, request, _):
-        record = logging.makeLogRecord({"exc_info": sys.exc_info(),
-                                        "request": request})
-        self.log_handler.emit(record)
+            return None
+        error = Error.objects.create(
+            kind=kind.__name__,
+            html=ExceptionReporter(request, kind, info, data).get_traceback_html(),
+            path=request.build_absolute_uri(),
+            info=info,
+            data='\n'.join(traceback.format_exception(kind, info, data)),
+        )
+        error.save()

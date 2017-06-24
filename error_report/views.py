@@ -1,11 +1,16 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
 from django.http import HttpResponse
-from django.views.generic import detail
 
-from models import ServerError
+from models import Error
 
 
-class TechnicalResponseView(detail.BaseDetailView):
-    queryset = ServerError.objects.all()
-
-    def render_to_response(self, context):
-        return HttpResponse(context['servererror'].technical_response)
+def error_html(request, error):
+    """
+    View that return error html for iframe
+    :param request: Request object
+    :param error: Error id
+    :return: Error html
+    """
+    return HttpResponse(Error.objects.get(id=error).html)

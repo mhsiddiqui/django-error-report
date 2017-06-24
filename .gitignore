@@ -6,3 +6,4 @@
 ^dist/
 ^build/
 ^django-shoogie-
+*.idea
