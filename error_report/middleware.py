@@ -1,11 +1,10 @@
 import traceback
 import sys
 
-from django.conf import settings
-
 from django.views.debug import ExceptionReporter
 
 from error_report.models import Error
+from settings import ERROR_DETAIL_SETTINGS
 
 
 class ExceptionProcessor(object):
@@ -21,7 +20,7 @@ class ExceptionProcessor(object):
 
     def process_exception(self, request, exception):
         kind, info, data = sys.exc_info()
-        if settings.DEBUG:
+        if not ERROR_DETAIL_SETTINGS.get('ERROR_DETAIL_ENABLE'):
             return None
         error = Error.objects.create(
             kind=kind.__name__,

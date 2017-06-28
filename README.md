@@ -2,50 +2,45 @@
   django-error-report
   ------------------
 
-View all Django errors from right within the administration console.
+View all Django Error detail in Django Admin.
 
-Erroneous traps Django's in-built exception signal, captures the
-traceback . which would be the same beautiful exception page that Django
-displays when debugging is enabled . and saves it to the database so you
+Error-report save Django error traceback and details which would be the same beautiful exception page that Django displays when debugging is enabled and saves it to the database so you
 can view it later.
 
-It's quite similar to django-sentry from the folks at Disqus but a more
-lightweight, no-frills, error-logging system for Django. Credits to
-David Cramer over at Disqus for the initial django-db-log which is the
-work this is based upon.
+It's simple alternative to django-sentry which is a paid option to see error detail.
 
-If there's a feature that you're missing and you'd like added, please
-create an issue on the project page at Github or create the fix yourself
-and send me a pull request. Adding a few small features here and there
-are okay but this is in no way aimed to encompass all the functionality
-of a full-blown error-logging stack like Sentry.
+You can create issues for feature you want in django-error-report in future.
 
 Features
 ========
 
 -   A simple user interface for browsing error records in the database.
 
+Requirements
+============
+- Python 2.7
+- Django > 1.6
+
 Installation
 ============
 
-Start with Django 1.3 or higher; erroneous is intended for use with the
-new logging configuration first available in that version.
+1. To install, simply run:
 
-To install, simply run:
+    > pip install django-error-report
 
-    pip install django-error-report
+2.  Add `error_report` to your `INSTALLED_APPS` setting.
+3.  Run `manage.py migrate` to create the database tables.
 
 Configuration
 =============
 
-1.  Add `error_report` to your `INSTALLED_APPS` setting.
-2.  Run `manage.py migrate` to create the database tables.
+Required settings for Django-error-report should be added in settings.py file like this
 
-There isn't much else than that to get it up and running.
-
-Future
-======
-
--   support for logging to other sinks: message queues, non-relational
-    databases.
+    ERROR_DETAIL_SETTINGS = {
+        "CONFIGURATION_OPTION": VALUE
+    }
+    
+Available configuration options are below
+- ERROR_DETAIL_ENABLE: Should Log error detail or not (True/False)
+- ERROR_DETAIL_HEIGHT: Height of Iframe in admin (in pixels) 
 
