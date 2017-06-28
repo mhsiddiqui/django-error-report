@@ -11,7 +11,6 @@ setup(
     },
     author="M Hassan Siddiqui",
     author_email="mhassan.eeng@gmail.com",
-    download_url='https://github.com/mhsiddiqui/django-error-report',
     description="View Django Error Report in Django Admin",
     url="https://github.com/mhsiddiqui/django-error-report",
     classifiers=[
