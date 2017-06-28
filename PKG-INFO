@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: django-erroneous
+Version: 0.1.0
+Summary: django-error-report makes it easy to view Django application errors in Django Admin.
+Home-page: https://github.com/mhsiddiqui/django-error-report
+Author: Muhammad Hassan Siddiqui
+Author-email: mhassan.eeng@gmail.com
+License: BSD License
+Download-URL: http://github.com/mhsiddiqui/django-error-report/downloads
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Framework :: Django
