@@ -1,6 +1,6 @@
-+-----------------------+
-| django-error-report   |
-+-----------------------+
+
+django-error-report
+===================
 
 View all Django Error detail in Django Admin.
 
@@ -53,5 +53,7 @@ file like this
     }
 
 Available configuration options are below - ERROR\_DETAIL\_ENABLE:
+
 1.  ERROR\_DETAIL\_ENABLE: Should Log error detail or not (True/False)
+
 2.  ERROR\_DETAIL\_HEIGHT: Height of Iframe in admin (in pixels)
