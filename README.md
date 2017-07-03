@@ -1,3 +1,4 @@
+              
 django-error-report
 ===================
 
@@ -29,12 +30,13 @@ Installation
 
 1. To install, simply run:
 
-   pip install django-error-report
+       pip install django-error-report
 
 2. Add ``error_report`` to your ``INSTALLED_APPS`` setting.
 3. Add below in your ``urls.py`` file
 
-   url(r'^error/', include('error\_report.urls'))
+       url(r'^error/', include('error_report.urls'))
+
 
 4. Run ``manage.py migrate`` to create the database tables.
 
@@ -46,16 +48,12 @@ file like this
 
 ::
 
-::
-
     ERROR_DETAIL_SETTINGS = {
         "CONFIGURATION_OPTION": VALUE
     }
 
 Available configuration options are below - ERROR\_DETAIL\_ENABLE:
 
-1. ERROR\_DETAIL\_ENABLE: Should Log error detail or not (True/False)
+1.  ERROR\_DETAIL\_ENABLE: Should Log error detail or not (True/False)
 
-2. ERROR\_DETAIL\_HEIGHT: Height of Iframe in admin (in pixels)
-
-
+2.  ERROR\_DETAIL\_HEIGHT: Height of Iframe in admin (in pixels)
