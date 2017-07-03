@@ -1,17 +1,17 @@
 Metadata-Version: 1.1
 Name: django-error-report
-Version: 0.1.0
+Version: 0.1.3
 Summary: django-error-report makes it easy to view Django application errors in Django Admin.
 Home-page: https://github.com/mhsiddiqui/django-error-report
 Author: Muhammad Hassan Siddiqui
 Author-email: mhassan.eeng@gmail.com
 License: BSD License
-Download-URL: http://github.com/mhsiddiqui/django-error-report/downloads
+Download-URL: http://github.com/mhsiddiqui/django-error-report/
 Description: Django-error-report
             =================
-            +-----------------------+
-            | django-error-report   |
-            +-----------------------+
+
+            django-error-report
+            ===================
 
             View all Django Error detail in Django Admin.
 
@@ -44,7 +44,12 @@ Description: Django-error-report
                    pip install django-error-report
 
             2. Add ``error_report`` to your ``INSTALLED_APPS`` setting.
-            3. Run ``manage.py migrate`` to create the database tables.
+            3. Add below in your ``urls.py`` file
+
+                   url(r'^error/', include('error_report.urls'))
+
+
+            4. Run ``manage.py migrate`` to create the database tables.
 
             Configuration
             =============
@@ -58,8 +63,10 @@ Description: Django-error-report
                     "CONFIGURATION_OPTION": VALUE
                 }
 
-            Available configuration options are below
+            Available configuration options are below - ERROR\_DETAIL\_ENABLE:
+
             1.  ERROR\_DETAIL\_ENABLE: Should Log error detail or not (True/False)
+
             2.  ERROR\_DETAIL\_HEIGHT: Height of Iframe in admin (in pixels)
 Platform: UNKNOWN
 Classifier: Environment :: Web Environment
