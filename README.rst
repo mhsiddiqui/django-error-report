@@ -33,7 +33,12 @@ Installation
        pip install django-error-report
 
 2. Add ``error_report`` to your ``INSTALLED_APPS`` setting.
-3. Run ``manage.py migrate`` to create the database tables.
+3. Add below in your ``urls.py`` file
+
+       url(r'^error/', include('error_report.urls'))
+
+
+4. Run ``manage.py migrate`` to create the database tables.
 
 Configuration
 =============

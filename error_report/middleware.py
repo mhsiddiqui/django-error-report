@@ -20,7 +20,7 @@ class ExceptionProcessor(object):
 
     def process_exception(self, request, exception):
         kind, info, data = sys.exc_info()
-        if not ERROR_DETAIL_SETTINGS.get('ERROR_DETAIL_ENABLE'):
+        if not ERROR_DETAIL_SETTINGS.get('ERROR_DETAIL_ENABLE', True):
             return None
         error = Error.objects.create(
             kind=kind.__name__,
