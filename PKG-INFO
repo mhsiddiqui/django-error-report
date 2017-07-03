@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: django-error-report
-Version: 0.1.3
+Version: 0.1.4
 Summary: django-error-report makes it easy to view Django application errors in Django Admin.
 Home-page: https://github.com/mhsiddiqui/django-error-report
 Author: Muhammad Hassan Siddiqui
