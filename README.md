@@ -37,8 +37,8 @@ Installation
 
        url(r'^error/', include('error_report.urls'))
 
-
-4. Run ``manage.py migrate`` to create the database tables.
+4. Add ``error_report.middleware.ExceptionProcessor`` in your middlewares
+5. Run ``manage.py migrate`` to create the database tables.
 
 Configuration
 =============

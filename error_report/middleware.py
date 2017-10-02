@@ -12,7 +12,7 @@ class ExceptionProcessor(object):
     Middleware that save details of exception that occurs in any app to the database.
     """
 
-    def __init__(self, get_response):
+    def __init__(self, get_response=None):
         self.get_response = get_response
 
     def __call__(self, request):
