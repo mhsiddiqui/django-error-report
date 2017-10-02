@@ -45,10 +45,6 @@ Configuration
 Required settings for Django-error-report should be added in settings.py
 file like this
 
-::
-
-::
-
     ERROR_DETAIL_SETTINGS = {
         "CONFIGURATION_OPTION": VALUE
     }
