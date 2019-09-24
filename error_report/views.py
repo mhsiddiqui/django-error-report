@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.http import HttpResponse
 
-from models import Error
+from error_report.models import Error
 
 
 def error_html(request, error):

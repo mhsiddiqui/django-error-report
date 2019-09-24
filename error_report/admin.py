@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from models import Error
+from error_report.models import Error
 
 
 class ErrorAdmin(admin.ModelAdmin):
