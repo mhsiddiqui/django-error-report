@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+from __future__ import absolute_import, unicode_literals
 
 from django.http import HttpResponse
 
-from error_report.models import Error
+from models import Error
 
 
 def error_html(request, error):

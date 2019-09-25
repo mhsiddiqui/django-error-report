@@ -1,10 +1,12 @@
+from __future__ import absolute_import, unicode_literals
+
 from django.db import models
 from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
 
 from django.utils import version
 
-from error_report.settings import ERROR_DETAIL_SETTINGS
+from settings import ERROR_DETAIL_SETTINGS
 
 if version.get_complete_version() < (1, 10):
     from django.core.urlresolvers import reverse

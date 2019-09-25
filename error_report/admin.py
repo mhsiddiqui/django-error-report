@@ -1,6 +1,8 @@
+from __future__ import absolute_import, unicode_literals
+
 from django.contrib import admin
 
-from error_report.models import Error
+from models import Error
 
 
 class ErrorAdmin(admin.ModelAdmin):
