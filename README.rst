@@ -1,3 +1,4 @@
+
 django-error-report
 ===================
 
@@ -16,28 +17,41 @@ future.
 Features
 ========
 
--  A simple user interface for browsing error records in the database.
+
+* A simple user interface for browsing error records in the database.
 
 Requirements
 ============
 
--  Python 2.7, 3.6
--  Django > 1.7
+
+* Python 2.7, 3.6
+* Django > 1.7
 
 Installation
 ============
 
-1. To install, simply run:
 
-   pip install django-error-report
+#. 
+   To install, simply run:
 
-2. Add ``error_report`` to your ``INSTALLED_APPS`` setting.
-3. Add below in your ``urls.py`` file
+   .. code-block::
 
-   url(r'^error/', include('error\_report.urls'))
+      pip install django-error-report
 
-4. Add ``error_report.middleware.ExceptionProcessor`` in your middlewares
-5. Run ``manage.py migrate`` to create the database tables.
+#. 
+   Add ``error_report`` to your ``INSTALLED_APPS`` setting.
+
+#. 
+   Add below in your ``urls.py`` file
+
+   .. code-block::
+
+      url(r'^error/', include('error_report.urls'))
+
+#. 
+   Add ``error_report.middleware.ExceptionProcessor`` in your middlewares
+
+#. Run ``manage.py migrate`` to create the database tables.
 
 Configuration
 =============
@@ -45,14 +59,18 @@ Configuration
 Required settings for Django-error-report should be added in settings.py
 file like this
 
-    ERROR_DETAIL_SETTINGS = {
-        "CONFIGURATION_OPTION": VALUE
-    }
+.. code-block::
 
-Available configuration options are below - ERROR\_DETAIL\_ENABLE:
-
-1. ERROR\_DETAIL\_ENABLE: Should Log error detail or not (True/False)
-
-2. ERROR\_DETAIL\_HEIGHT: Height of Iframe in admin (in pixels)
+   ERROR_DETAIL_SETTINGS = {
+       "CONFIGURATION_OPTION": VALUE
+   }
 
 
+Available configuration options are below - ERROR_DETAIL_ENABLE:
+
+
+#. 
+   ERROR_DETAIL_ENABLE: Should Log error detail or not (True/False)
+
+#. 
+   ERROR_DETAIL_HEIGHT: Height of Iframe in admin (in pixels)
