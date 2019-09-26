@@ -5,8 +5,8 @@ import sys
 
 from django.views.debug import ExceptionReporter
 
-from models import Error
-from settings import ERROR_DETAIL_SETTINGS
+from error_report.models import Error
+from error_report.settings import ERROR_DETAIL_SETTINGS
 
 
 class ExceptionProcessor(object):

@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from django.utils import version
 
-from settings import ERROR_DETAIL_SETTINGS
+from error_report.settings import ERROR_DETAIL_SETTINGS
 
 if version.get_complete_version() < (1, 10):
     from django.core.urlresolvers import reverse

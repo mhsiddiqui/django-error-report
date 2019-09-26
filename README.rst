@@ -21,7 +21,7 @@ Features
 Requirements
 ============
 
--  Python 2.7
+-  Python 2.7, 3.6
 -  Django > 1.7
 
 Installation
