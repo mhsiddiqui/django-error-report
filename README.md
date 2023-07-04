@@ -1,6 +1,7 @@
               
-django-error-report
+django-error-report-2
 ===================
+Maintained fork of [django-error-report](https://github.com/mhsiddiqui/django-error-report).
 
 View all Django Error detail in Django Admin.
 
