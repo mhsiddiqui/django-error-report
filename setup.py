@@ -35,7 +35,7 @@ setup(
     zip_safe=False,
     license="BSD License",
     install_requires=[
-        'Django>=1.7'
+        'Django>=4.0'
     ],
-    version='0.4.0a1',
+    version='0.4.0',
 )
