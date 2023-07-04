@@ -37,5 +37,5 @@ setup(
     install_requires=[
         'Django>=1.7'
     ],
-    version='0.4.0a0',
+    version='0.4.0a1',
 )
