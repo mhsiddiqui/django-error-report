@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 
 setup(
-    name="django-error-report",
+    name="django-error-report-2",
     package_data={
         'error_report': [
             'README.md',
@@ -21,7 +21,7 @@ setup(
     author_email="mhassan.eeng@gmail.com",
     description="View Django Error Report in Django Admin",
     long_description=long_description,
-    url="https://github.com/mhsiddiqui/django-error-report",
+    url="https://github.com/matmair/django-error-report-2",
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
@@ -36,5 +36,5 @@ setup(
     install_requires=[
         'Django>=1.7'
     ],
-    version='0.2.0',
+    version='0.4.0a0',
 )
