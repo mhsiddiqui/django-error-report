@@ -5,7 +5,7 @@ from codecs import open
 
 here = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 
@@ -21,6 +21,7 @@ setup(
     author_email="mhassan.eeng@gmail.com",
     description="View Django Error Report in Django Admin",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/matmair/django-error-report-2",
     classifiers=[
         'Environment :: Web Environment',
