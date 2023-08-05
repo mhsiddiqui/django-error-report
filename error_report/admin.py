@@ -2,12 +2,10 @@
 from __future__ import absolute_import, unicode_literals
 
 from django.contrib import admin
-from django.views.decorators.clickjacking import xframe_options_sameorigin
 
 from error_report.models import Error
 
 
-@xframe_options_sameorigin
 class ErrorAdmin(admin.ModelAdmin):
     """Admin for Error model."""
     list_display = ('path', 'kind', 'info', 'when')
