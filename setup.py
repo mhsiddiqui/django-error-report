@@ -1,3 +1,4 @@
+"""Setup for django-error-report-2 package."""
 from codecs import open
 from os import path
 

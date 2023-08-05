@@ -1,3 +1,4 @@
+"""Urls for django-error-report-2 package."""
 from __future__ import absolute_import, unicode_literals
 
 try:
