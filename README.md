@@ -1,4 +1,4 @@
-              
+
 django-error-report-2
 ===================
 Maintained fork of [django-error-report](https://github.com/mhsiddiqui/django-error-report). Original author  [mhsiddiqui](https://github.com/mhsiddiqui/)

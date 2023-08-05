@@ -1,10 +1,9 @@
 from __future__ import absolute_import, unicode_literals
 
 from django.db import models
+from django.utils import version
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-
-from django.utils import version
 
 from error_report.settings import ERROR_DETAIL_SETTINGS
 
