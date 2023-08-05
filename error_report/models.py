@@ -48,6 +48,6 @@ class Error(models.Model):
     def html_iframe(self):
         """Return an Iframe for Viewing Error detail in django admin."""
         return \
-            format_html('<iframe style="width: 100%; height: {}px;" src="{}"></iframe>',
-                        ERROR_DETAIL_SETTINGS.get('ERROR_DETAIL_HEIGHT', 1000),
-                        reverse('error-html-link', kwargs={'error': self.id}))
+            format_html('<iframe style="width: 100%; height: {height}px;" src="{link}"></iframe>',
+                        height=ERROR_DETAIL_SETTINGS.get('ERROR_DETAIL_HEIGHT', 1000),
+                        link=reverse('error-html-link', kwargs={'error': self.id}))
